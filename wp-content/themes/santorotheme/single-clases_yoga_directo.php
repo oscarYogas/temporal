@@ -28,6 +28,7 @@
   * 
   **/
 
+<<<<<<< HEAD
   $_SESSION['landing_before_login'] = home_url( $wp->request ); 
   $_SESSION['restricted'] =  "si";
   /*$_SESSION['last_class_seen'] = home_url( $wp->request );*/ 
@@ -40,6 +41,13 @@
 
   
   if ( (get_field('plan') == "Gratis") || ($current_user_es_regalo == "si")) {
+=======
+  $current_user = wp_get_current_user();
+  $current_user_id = $current_user->ID;
+
+  
+  if  (get_field('plan') == "Gratis") {
+>>>>>>> a8643b98b63d5ae05a0ea26e3f2bb927c13e8b23
     if (is_user_logged_in()) { 
             $videoBlocked = false;
             $textButtonCTA = "";

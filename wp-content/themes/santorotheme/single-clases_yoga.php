@@ -33,6 +33,7 @@
   * 
   **/
 
+<<<<<<< HEAD
   $_SESSION['landing_before_login'] = home_url( $wp->request ); 
   $_SESSION['restricted'] =  "si";
   $_SESSION['last_class_seen'] = home_url( $wp->request ); 
@@ -40,11 +41,16 @@
   $_SESSION['last_class_plan'] = get_field('plan');
 
 
+=======
+>>>>>>> a8643b98b63d5ae05a0ea26e3f2bb927c13e8b23
   /* Propieades para evento de amplitude */      
   $url_actual = home_url( add_query_arg( array(), $wp->request ) );
   $current_user = wp_get_current_user();
   $current_user_id = $current_user->ID;
+<<<<<<< HEAD
   $current_user_es_regalo =  esc_attr(get_the_author_meta('user_es_regalo', $current_user_id ));
+=======
+>>>>>>> a8643b98b63d5ae05a0ea26e3f2bb927c13e8b23
 
  
   if (wcs_user_has_subscription($user_id, '', 'active')) { 
@@ -62,7 +68,11 @@
   }
 
 
+<<<<<<< HEAD
   if ( (get_field('plan') == "Gratis") || ($current_user_es_regalo == "si")) {
+=======
+  if  (get_field('plan') == "Gratis")  {
+>>>>>>> a8643b98b63d5ae05a0ea26e3f2bb927c13e8b23
     if (is_user_logged_in()) { 
           $videoBlocked = false;
           $textButtonCTA = "";
@@ -279,8 +289,12 @@
               'CLASE_VISUALIZACIONES': '<?php the_field('visualizaciones'); ?>',
               'URL': '<?php echo $url_actual; ?>',
               'USER_PLAN': '<?php echo $user_plan; ?>',
+<<<<<<< HEAD
               'USER_EMAIL': '<?php echo $current_user_email; ?>',
               'USER_ES_REGALO': '<?php echo $current_user_es_regalo; ?>'
+=======
+              'USER_EMAIL': '<?php echo $current_user_email; ?>'
+>>>>>>> a8643b98b63d5ae05a0ea26e3f2bb927c13e8b23
              };
         
         

@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
  <?php get_header(); 
 
 $_SESSION['landing_before_login'] = home_url( $wp->request ); 
@@ -8,14 +9,20 @@ $_SESSION['last_class_seen_directo'] = home_url( $wp->request );
 $_SESSION['last_class_plan'] = get_field('plan');*/
   
  ?>
+=======
+ <?php get_header(); ?>
+>>>>>>> a8643b98b63d5ae05a0ea26e3f2bb927c13e8b23
 
 
 
 
     <?php if (have_posts()):  while(have_posts()): the_post(); ?>
     
+<<<<<<< HEAD
     <?php $_SESSION['last_programa_seen'] = home_url( $wp->request );  ?>
 
+=======
+>>>>>>> a8643b98b63d5ae05a0ea26e3f2bb927c13e8b23
       <main>
 
       <div class="container-xl programa">
@@ -134,10 +141,18 @@ $_SESSION['last_class_plan'] = get_field('plan');*/
  
     </main>
 
+<<<<<<< HEAD
   <script type="application/javascript">
  
    <?php endwhile; endif;?>
 
+=======
+ 
+   <?php endwhile; endif;?>
+
+   <script type="application/javascript">
+
+>>>>>>> a8643b98b63d5ae05a0ea26e3f2bb927c13e8b23
 
    reproductor.on('ready', function(){
                     var wrapper = document.getElementById("js-wrap-16-9");

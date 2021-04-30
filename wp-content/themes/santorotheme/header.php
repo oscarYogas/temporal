@@ -136,7 +136,10 @@ wp_head();
       $current_user = wp_get_current_user();
       $current_user_email = $current_user->user_email;
       $current_user_id = $current_user->ID;
+<<<<<<< HEAD
       $current_user_es_regalo =  esc_attr(get_the_author_meta('user_es_regalo', $current_user_id ));
+=======
+>>>>>>> a8643b98b63d5ae05a0ea26e3f2bb927c13e8b23
 
       if (wcs_user_has_subscription($user_id, '', 'active')) { 
 				$user_plan = "active";
@@ -156,14 +159,21 @@ wp_head();
 
 
     <script>
+<<<<<<< HEAD
       var identify = new amplitude.Identify().set('plan', '<?php echo $user_plan; ?>').set('email', '<?php echo $current_user_email; ?>').set('es_regalo', '<?php echo $current_user_es_regalo; ?>');
+=======
+      var identify = new amplitude.Identify().set('plan', '<?php echo $user_plan; ?>').set('email', '<?php echo $current_user_email; ?>');
+>>>>>>> a8643b98b63d5ae05a0ea26e3f2bb927c13e8b23
       amplitude.getInstance().identify(identify);
 
       var eventProperties = {
         'URL': '<?php echo $url_actual; ?>',
         'USER_PLAN': '<?php echo $user_plan; ?>',
         'USER_EMAIL': '<?php echo $current_user_email; ?>',
+<<<<<<< HEAD
         'USER_ES_REGALO': '<?php echo $current_user_es_regalo; ?>'
+=======
+>>>>>>> a8643b98b63d5ae05a0ea26e3f2bb927c13e8b23
       };
       amplitude.getInstance().logEvent('PAGE LOADED', eventProperties);
 
@@ -379,6 +389,7 @@ else{
 
     </header>
 
+<<<<<<< HEAD
     <div class="session-variable">
     
      <?php //echo '<p>' . print_r($_SESSION, TRUE) . '</p>'; ?>
@@ -391,6 +402,8 @@ else{
            echo do_shortcode( '[coupon_is_applied code="*"]' . $text_shortocode_tomas. '[/coupon_is_applied]' ); */
     ?>
 
+=======
+>>>>>>> a8643b98b63d5ae05a0ea26e3f2bb927c13e8b23
 
 <script>
     /**

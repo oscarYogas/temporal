@@ -12,8 +12,11 @@ add_action( 'wp_enqueue_scripts', 'load_scripts' );
 
 
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> a8643b98b63d5ae05a0ea26e3f2bb927c13e8b23
 function load_styles() {
     wp_register_style( 'my_styles', get_template_directory_uri() . '/css/my-styles.css', array(), false, 'all' );
 	wp_enqueue_style('my_styles');
@@ -101,6 +104,7 @@ function clases_yoga_post_type() {
 add_action( 'init', 'clases_yoga_post_type', 0 );
 
 
+<<<<<<< HEAD
 // Register Custom Post Type
 function clases_yoga_dev_post_type() {
 
@@ -164,6 +168,8 @@ function clases_yoga_dev_post_type() {
 }
 add_action( 'init', 'clases_yoga_dev_post_type', 0 );
 
+=======
+>>>>>>> a8643b98b63d5ae05a0ea26e3f2bb927c13e8b23
 
 // Register Custom Post Type
 function programas_yoga_post_type() {
@@ -315,6 +321,7 @@ function isacustom_excerpt_length($length) {
 add_filter('excerpt_length', 'isacustom_excerpt_length');
 
 
+<<<<<<< HEAD
 /** PARA REDIRIGIR TRAS LOGIN LA PAGINA ANTERIOR */
 // start global session
 function start_session() {
@@ -352,6 +359,11 @@ function start_session() {
 function redirect_url() {
 	// para llevar siempre la cuenta de la ultima pagina vista y poder volver
 	//$_SESSION['referer_url'] = wp_get_referer();
+=======
+
+// get  referer url and save it 
+function redirect_url() {
+>>>>>>> a8643b98b63d5ae05a0ea26e3f2bb927c13e8b23
 
 	// Añade automáticamente un producto al carrito de compras en WooCommerce cuando el usuario visita la tienda
 	global $woocommerce;
@@ -395,6 +407,7 @@ add_action( 'template_redirect', 'redirect_url' );
  */
 function santoro_register_redirect( $redirect ) {
 
+<<<<<<< HEAD
 		$landing_before_login = $_SESSION['landing_before_login'];			
 
 		//si viene de cupón le muestro directamente la pantalla de pago
@@ -425,6 +438,10 @@ function santoro_register_redirect( $redirect ) {
 					}
 				}
 	}
+=======
+	wp_redirect(home_url().'/completar-alta/?registro=ok');
+}
+>>>>>>> a8643b98b63d5ae05a0ea26e3f2bb927c13e8b23
 add_filter( 'woocommerce_registration_redirect', 'santoro_register_redirect' );
 
 
@@ -432,6 +449,7 @@ add_filter( 'woocommerce_registration_redirect', 'santoro_register_redirect' );
 function santoro_login_redirect( $redirect, $user ) {
 
 	$user_id = $user->ID;
+<<<<<<< HEAD
 
 	$landing_before_login = $_SESSION['landing_before_login'];
 	$user_es_regalo = get_user_meta($user_id, 'user_es_regalo', true ); 
@@ -475,14 +493,38 @@ function santoro_login_redirect( $redirect, $user ) {
 		}
 
 } 
+=======
+			
+	if (wcs_user_has_subscription($user_id, '', 'active')) { 
+		wp_redirect($landing_before_login);
+
+	} else if (wcs_user_has_subscription($user_id, '', 'pending-cancel')) { 
+		wp_redirect(home_url().'/cuenta/');
+
+	} else if (wcs_user_has_subscription($user_id, '', 'cancelled')) { 
+		wp_redirect(home_url().'/cuenta/');
+	} else if (wcs_user_has_subscription($user_id, '', 'on-hold')) {  
+		wp_redirect(home_url().'/cuenta/'); 
+	} else if (wcs_user_has_subscription($user_id, '', 'expired')) {
+		wp_redirect(home_url().'/cuenta/');
+	} else {
+		wp_redirect(home_url().'/completar-alta/');
+					
+	}
+}
+		
+>>>>>>> a8643b98b63d5ae05a0ea26e3f2bb927c13e8b23
 
 add_filter( 'woocommerce_login_redirect', 'santoro_login_redirect', 10, 2 );
 
 
 
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> a8643b98b63d5ae05a0ea26e3f2bb927c13e8b23
 /* PERSONALIZACIÓN CARRITO*/
 remove_action( 'woocommerce_before_checkout_form', 'woocommerce_checkout_login_form', 10 );
 //remove_action( 'woocommerce_before_checkout_form', 'woocommerce_checkout_coupon_form', 10 );
@@ -510,6 +552,7 @@ function custom_override_checkout_fields( $fields ) {
 }
 add_filter( 'woocommerce_checkout_fields' , 'custom_override_checkout_fields' );
 
+<<<<<<< HEAD
 /* Esconder cupon de manera conditional para así hacer campañas especificas: por ejemplo groupon, le mando a landing groupon con login/register y de ahí a checkout */
 //add_filter( 'woocommerce_coupons_enabled', 'conditionally_hide_cart_coupon_field' );
 function conditionally_hide_cart_coupon_field( $enabled ) {
@@ -537,6 +580,8 @@ function conditionally_hide_cart_coupon_field( $enabled ) {
 
 
 
+=======
+>>>>>>> a8643b98b63d5ae05a0ea26e3f2bb927c13e8b23
 
 /* Para cambiar los label de woocomerce */ 
 function wppb_change_text_login( $translated_text, $text, $domain ) {
@@ -660,12 +705,20 @@ add_filter( 'wcs_view_subscription_actions', 'eg_remove_my_subscriptions_button'
 
 // Add term and conditions check box on registration form
 add_action( 'woocommerce_register_form', 'add_terms_and_conditions_to_registration', 20 );
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> a8643b98b63d5ae05a0ea26e3f2bb927c13e8b23
 function add_terms_and_conditions_to_registration() {
 	
 
     if ( is_account_page() ) {
         ?>
+<<<<<<< HEAD
 	<input id="user_coupon_visible" name="user_coupon_visible" type="hidden" value="<?php echo $_SESSION['coupon_visible']?>">
+=======
+>>>>>>> a8643b98b63d5ae05a0ea26e3f2bb927c13e8b23
 	<p>
         <p class="form-row terms wc-terms-and-conditions">
             <label class="woocommerce-form__label woocommerce-form__label-for-checkbox checkbox">
@@ -679,6 +732,7 @@ function add_terms_and_conditions_to_registration() {
 
 }
 
+<<<<<<< HEAD
 //Guardar los campos adicionales del usuario
 function guardar_campos_adicionales_usuario($user_id){
 	if(isset($_POST['user_coupon_visible'])){
@@ -715,6 +769,8 @@ add_action('edit_user_profile', 'agregar_campos_personalizados_usuario_backend')
   
 add_action('personal_options_update', 'guardar_campos_adicionales_usuario');
 add_action('edit_user_profile_update', 'guardar_campos_adicionales_usuario');
+=======
+>>>>>>> a8643b98b63d5ae05a0ea26e3f2bb927c13e8b23
   
 
 // Validate required term and conditions check box
@@ -726,6 +782,7 @@ function terms_and_conditions_validation( $username, $email, $validation_errors 
     return $validation_errors;
 }
 
+<<<<<<< HEAD
 /**
  * Write session to disk to prevent cURL time-out which may occur with
  * WordPress (since 4.9.2, see ),
@@ -748,6 +805,8 @@ function custom_wp_fix_pre_http_request($preempt, $r, $url)
 }
 add_filter('pre_http_request', 'custom_wp_fix_pre_http_request', 10, 3);
 
+=======
+>>>>>>> a8643b98b63d5ae05a0ea26e3f2bb927c13e8b23
 function get_name_or_display_name_without_id() {
 
 	global $current_user;

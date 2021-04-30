@@ -92,33 +92,45 @@ if ( ! defined( 'ABSPATH' ) ) {
 					<img class="home-item-img"  src="https://www.theclassyoga.com/wp-content/uploads/2020/06/Flexibilidad-intro.jpg" alt="Programas de yoga" />
 					<a href="<?php home_url();?>/programas-yoga/"><h3>Programas</h3></a> 
 					<p class="subtitle3">Varios días seguidos de clases de yoga con una misma intención</p> 
+<<<<<<< HEAD
 					<?php if (isset($_SESSION['last_programa_seen'])) { ?> 
 						<button class="btn btn-secondary"  style="margin:0rem"  onclick="window.location.href='<?php echo $_SESSION['last_programa_seen']; ?>'">Tu último programa</button>
 					<?php } else { ?>
 						<button class="btn btn-secondary"  style="margin:0rem"  onclick="window.location.href='<?php echo home_url()?>/programas-yoga'">Ver programa</button>
 					<?php } ?>
+=======
+						<button class="btn btn-secondary"  style="margin:0rem"  onclick="window.location.href='<?php echo home_url()?>/programas-yoga'">Ver programas</button>
+>>>>>>> a8643b98b63d5ae05a0ea26e3f2bb927c13e8b23
 				</li>
 	
 				<li class="home-item">
 					<img class="home-item-img"  src="https://www.theclassyoga.com/wp-content/uploads/2020/06/Yoga-x-manana-3.jpg" alt="Clases sueltas grabadas" />          
 					<a href="<?php home_url();?>/clases-grabadas/"><h3>Clases grabadas</h3></a>
 					<p class="subtitle3">Elige el tipo de yoga, duración, nivel, intensidad, foco del cuerpo y profesor</p> 
+<<<<<<< HEAD
 					<?php if (isset($_SESSION['last_class_seen'])) { ?> 
 						<button class="btn btn-secondary"  style="margin:0rem"  onclick="window.location.href='<?php echo $_SESSION['last_class_seen']; ?>'">Tu última clase grabada</button>
 						<?php } else { ?>
 							<button class="btn btn-secondary"  style="margin:0rem"  onclick="window.location.href='<?php echo home_url()?>/clases-grabadas'">Ver clases grabadas</button>
 					<?php } ?>					
+=======
+						<button class="btn btn-secondary"  style="margin:0rem"  onclick="window.location.href='<?php echo home_url()?>/clases-grabadas'">Ver clases grabadas</button>
+>>>>>>> a8643b98b63d5ae05a0ea26e3f2bb927c13e8b23
 				</li>
 				<li class="home-item">
 					<img class="home-item-img"  src="https://www.theclassyoga.com/wp-content/uploads/2020/07/clases-directo-1.jpg" alt="Clases en directo por streaming" />          
 					<a href="<?php home_url();?>/clases-directo/"><h3>Clases directo</h3></a>
 					<p class="subtitle3">Clases online en directo para practicar a la vez con otros yoguis y un profe que te ayude</p> 
+<<<<<<< HEAD
 					<?php if (isset($_SESSION['last_class_seen_directo'])) { ?> 
 					<button class="btn btn-secondary"  style="margin:0rem" onclick="window.location.href='<?php echo $_SESSION['last_class_seen_directo']; ?>'">Tu última clase directo</button>
 					<?php } else { ?>
 						<button class="btn btn-secondary"  style="margin:0rem"  onclick="window.location.href='<?php echo home_url()?>/clases-directo'">Ver clases directo</button>
 					<?php } ?>	
 										
+=======
+					<button class="btn btn-secondary"  style="margin:0rem"  onclick="window.location.href='<?php echo home_url()?>/clases-directo'">Ver clases directo</button>					
+>>>>>>> a8643b98b63d5ae05a0ea26e3f2bb927c13e8b23
 				</li>     
 		</ul>
 		<br/>
@@ -132,33 +144,45 @@ if ( ! defined( 'ABSPATH' ) ) {
 					<img class="home-item-img"  src="https://www.theclassyoga.com/wp-content/uploads/2020/06/Flexibilidad-intro.jpg" alt="Programas de yoga" />
 					<a href="<?php home_url();?>/programas-yoga/"><h3>Programas</h3></a> 
 					<p class="subtitle3">Varios días seguidos de clases de yoga con una misma intención</p> 
+<<<<<<< HEAD
 					<?php if (isset($_SESSION['last_programa_seen'])) { ?> 
 						<button class="btn btn-secondary"  style="margin:0rem"  onclick="window.location.href='<?php echo $_SESSION['last_programa_seen']; ?>'">Tu último programa</button>
 					<?php } else { ?>
 						<button class="btn btn-secondary"  style="margin:0rem"  onclick="window.location.href='<?php echo home_url()?>/programas-yoga'">Ver programa</button>
 					<?php } ?>
+=======
+						<button class="btn btn-secondary"  style="margin:0rem"  onclick="window.location.href='<?php echo home_url()?>/programas-yoga'">Ver programas</button>
+>>>>>>> a8643b98b63d5ae05a0ea26e3f2bb927c13e8b23
 				</li>
 	
 				<li class="home-item">
 					<img class="home-item-img"  src="https://www.theclassyoga.com/wp-content/uploads/2020/06/Yoga-x-manana-3.jpg" alt="Clases sueltas grabadas" />          
 					<a href="<?php home_url();?>/clases-grabadas/"><h3>Clases grabadas</h3></a>
 					<p class="subtitle3">Elige el tipo de yoga, duración, nivel, intensidad, foco del cuerpo y profesor</p> 
+<<<<<<< HEAD
 					<?php if (isset($_SESSION['last_class_seen'])) { ?> 
 						<button class="btn btn-secondary"  style="margin:0rem"  onclick="window.location.href='<?php echo $_SESSION['last_class_seen']; ?>'">Tu última clase grabada</button>
 						<?php } else { ?>
 							<button class="btn btn-secondary"  style="margin:0rem"  onclick="window.location.href='<?php echo home_url()?>/clases-grabadas'">Ver clases grabadas</button>
 					<?php } ?>					
+=======
+							<button class="btn btn-secondary"  style="margin:0rem"  onclick="window.location.href='<?php echo home_url()?>/clases-grabadas'">Ver clases grabadas</button>
+>>>>>>> a8643b98b63d5ae05a0ea26e3f2bb927c13e8b23
 				</li>
 				<li class="home-item">
 					<img class="home-item-img"  src="https://www.theclassyoga.com/wp-content/uploads/2020/07/clases-directo-1.jpg" alt="Clases en directo por streaming" />          
 					<a href="<?php home_url();?>/clases-directo/"><h3>Clases directo</h3></a>
 					<p class="subtitle3">Clases online en directo para practicar a la vez con otros yoguis y un profe que te ayude</p> 
+<<<<<<< HEAD
 					<?php if (isset($_SESSION['last_class_seen_directo'])) { ?> 
 					<button class="btn btn-secondary"  style="margin:0rem" onclick="window.location.href='<?php echo $_SESSION['last_class_seen_directo']; ?>'">Tu última clase directo</button>
 					<?php } else { ?>
 						<button class="btn btn-secondary"  style="margin:0rem"  onclick="window.location.href='<?php echo home_url()?>/clases-directo'">Ver clases directo</button>
 					<?php } ?>	
 										
+=======
+						<button class="btn btn-secondary"  style="margin:0rem"  onclick="window.location.href='<?php echo home_url()?>/clases-directo'">Ver clases directo</button>
+>>>>>>> a8643b98b63d5ae05a0ea26e3f2bb927c13e8b23
 				</li>     
 		</ul>
 		<br/>

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php get_header(); 
 
 $_SESSION['landing_before_login'] = home_url()."/cuenta/";  /*ESE ES DISTINTO QUE EN EL RESTO DE SINGLES PORQUE EN EL BLOG QUIERO QUE VAYA  MI CUENTA */
@@ -7,6 +8,9 @@ $_SESSION['restricted'] =  "no";
 /*$_SESSION['last_class_plan'] = "Gratis";*/
 
 ?>
+=======
+<?php get_header(); ?>
+>>>>>>> a8643b98b63d5ae05a0ea26e3f2bb927c13e8b23
 
         <?php if (have_posts()):  while(have_posts()): the_post(); ?>
         

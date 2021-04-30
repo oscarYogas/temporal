@@ -30,7 +30,10 @@ VARIABLES
 }
 .oscar{
   font-size: 45px;
+<<<<<<< HEAD
   font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+=======
+>>>>>>> a8643b98b63d5ae05a0ea26e3f2bb927c13e8b23
 }
 .session-variable {
   position: relative;

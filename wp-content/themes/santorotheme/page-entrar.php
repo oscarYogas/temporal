@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php get_header(); 
 
 /*$_SESSION['landing_before_login'] = home_url()."/cuenta/"; /* AQUÍ NUNCA LO PONGO PORQUE SI NO SE QUEDA SIEMPRE EN CUENTA Y NO VOLVERÍA AL VIDEO JAMAS */ 
@@ -7,6 +8,9 @@
 /*$_SESSION['last_class_plan'] = "Gratis";*/
 
 ?>
+=======
+<?php get_header(); ?>
+>>>>>>> a8643b98b63d5ae05a0ea26e3f2bb927c13e8b23
 
 <?php
 

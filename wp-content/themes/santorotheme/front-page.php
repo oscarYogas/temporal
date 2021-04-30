@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 <?php get_header(); 
 
 $_SESSION['landing_before_login'] = home_url()."/cuenta/";  
@@ -8,6 +9,9 @@ $_SESSION['restricted'] =  "no";
 /*$_SESSION['last_class_plan'] = "Gratis";*/
 
 ?>
+=======
+<?php get_header(); ?>
+>>>>>>> a8643b98b63d5ae05a0ea26e3f2bb927c13e8b23
 
 
 
